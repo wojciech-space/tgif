@@ -1,0 +1,22 @@
+{
+  "name": "tgif",
+  "version": "0.1.0",
+  "description": "Czy to już TGIF?",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WojtekWernicki/tgif.git"
+  },
+  "keywords": [
+    "tgif"
+  ],
+  "author": "Wojtek Wernicki",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/WojtekWernicki/tgif/issues"
+  },
+  "homepage": "https://github.com/WojtekWernicki/tgif#readme"
+}
