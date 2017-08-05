@@ -1,5 +1,5 @@
 # Czy to już TGIF?
-###### wersja 0.1.0
+###### wersja 0.1.1
 
 Prosty licznik pokazujący czy jest już piątek, piąteczek, piątunio. Póki co pokazuje czas tylko od poniedziałku, 8:00 do piątku, 16:00.
 

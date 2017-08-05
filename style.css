@@ -10,7 +10,7 @@ html, body {
   width: 100%;
 }
 
-body, body #wrapper {
+body, #wrapper {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -21,6 +21,7 @@ body, body #wrapper {
 
 body {
   font-family: sans-serif;
+  padding: 10px;
 }
 
 body * {
@@ -31,22 +32,32 @@ body * {
   justify-content: center;
   -ms-align-items: center;
   align-items: center;
-  font-size: 48px;
+  max-width: 100%;
+  font-size: 32px;
   flex: 1;
 }
 
 #timer {
   color: #f00;
   font-family: monospace;
-  font-size: 72px;
+  font-size: 54px;
   font-weight: 700;
 }
 
+@media screen and (min-width: 600px) {
+  #wrapper {
+    font-size: 48px;
+  }
+
+  #timer {
+    font-size: 72px;
+  }
+}
+
 #description {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 footer {
   font-size: 12px;
-  padding: 10px;
 }
