@@ -1,5 +1,6 @@
 const timer = document.querySelector('#timer'),
-  wrapper = document.querySelector('#wrapper');
+  wrapper = document.querySelector('#wrapper'),
+  versionContainer = document.querySelector('#version'); 
 
 const calculateDiff = (start, end) => {
   return (Date.parse(end) / 1000) - (Date.parse(start) / 1000);
@@ -32,7 +33,19 @@ const countTime = (diff) => {
   return {days, hours, minutes, seconds, diff};
 }
 
+const setVersion = () => {
+  fetch('package.json')
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    versionContainer.textContent = json.version;
+  });
+}
+
 document.addEventListener("DOMContentLoaded", (event) => {
+  setVersion();
+  
   inter = setInterval(() => {
     const {days, hours, minutes, seconds, remaining} = countTime(tgif());
     timer.textContent = `${days}:${hours > 9 ? hours : '0' + hours}:${minutes > 9 ? minutes : '0' + minutes}:${seconds > 9 ? seconds : '0' + seconds}`;
