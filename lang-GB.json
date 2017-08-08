@@ -1,0 +1,12 @@
+{
+  "lang-string": "Choose language",
+  "tgif": "TGIF in…",
+  "description": "Counter starts at Monday, 8AM and counting time until Friday, 4PM.",
+  "version-string": "Version",
+  "powered": "counter powered by",
+  "flags": "flags icons",
+  "author": "author",
+  "source": "source code",
+  "license": "license",
+  "title": "Is TGIF time?"
+}

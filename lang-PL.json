@@ -1,0 +1,12 @@
+{
+  "lang-string": "Wybierz język",
+  "tgif": "TGIF za…",
+  "description": "Licznik startuje w poniedziałek o 8:00 i odlicza czas do piątku do godziny 16:00.",
+  "version-string": "Wersja",
+  "powered": "licznik napędzany przez",
+  "flags": "ikonki flag",
+  "author": "autor",
+  "source": "kod źródłowy",
+  "license": "licencja",
+  "title": "Czy to już TGIF?"
+}
