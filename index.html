@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Is TGIF time?</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="avris-flags.css">
 
   <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
@@ -20,9 +21,22 @@
 </head>
 <body>
 
+  <div id="lang">
+    <span id="lang-string">Choose language</span>:
+    <button id="EN">
+      <span class="flag-GB flag-outbound"></span>
+    </button>
+    <button id="DE">
+      <span class="flag-DE flag-outbound"></span>
+    </button>
+    <button id="PL">
+      <span class="flag-PL flag-outbound"></span>
+    </button>
+  </div>
+
   <div id="wrapper">
-    TGIF in…
-    <div id="timer"></div>
+    <span id="tgif">TGIF in…</span>
+    <div id="timer">LOADING TIMER</div>
 
     <div id="description">
       Counter starts at Monday, 8AM and counting time until Friday, 4PM.
@@ -30,13 +44,14 @@
   </div>
 
   <footer>
-    Version <span id="version">?.?.?</span> | counter powered by <a href="https://momentjs.com/">moment.js</a> |
-    author: <a href="https://wojtekwernicki.eu">Wojtek Wernicki</a> |
+    <span id="version-string">Version</span> <span id="version">?.?.?</span> | <span id="powered">counter powered by</span> <a href="https://momentjs.com/">moment.js</a> |
+    <span id="flags">flags icons</span>: <a href="https://flags.avris.it/">Avris Flags</a> |
+    <span id="author">author</span>: <a href="https://wojtekwernicki.eu">Wojtek Wernicki</a> |
     <a href="https://facebook.com/WojtekWernickiEU">Facebook</a> /
     <a href="https://twitter.com/WojtekWernicki">Twitter</a> /
     <a href="https://instagram.com/WojtekWernickiEU">Instagram</a> |
-    <a href="https://github.com/WojtekWernicki/tgif">source code</a> |
-    license: WTFPL
+    <a href="https://github.com/WojtekWernicki/tgif"><span id="source">source code</span></a> |
+    <span id="license">license</span>: WTFPL
   </footer>
 
   <script src="moment.min.js"></script>

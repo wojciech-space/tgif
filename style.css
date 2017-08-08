@@ -20,12 +20,28 @@ body, #wrapper {
 }
 
 body {
+  background: #eee;
   font-family: sans-serif;
   padding: 10px;
 }
 
 body * {
   text-align: center;
+}
+
+#lang {
+  line-height: 24px;
+  text-align: right;
+}
+
+#lang span[class^='flag-'] {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+#lang button {
+  border: none;
+  background: transparent;
 }
 
 #wrapper {

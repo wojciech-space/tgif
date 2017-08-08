@@ -1,6 +1,27 @@
 const timer = document.querySelector('#timer'),
   wrapper = document.querySelector('#wrapper'),
-  versionContainer = document.querySelector('#version'); 
+  versionContainer = document.querySelector('#version'),
+  language = localStorage.getItem('language') || 'GB';
+
+const getLang = (lang) => {
+  fetch(`lang-${lang}.json`)
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    for (key in json) {
+      if (key == 'title') {
+        document.title = json[key];
+        continue;
+      }
+      document.querySelector(`#${key}`).textContent = json[key];
+    }
+  });
+}
+
+const setLang = (lang) => {
+  localStorage.setItem('language', lang);
+}
 
 const calculateDiff = (start, end) => {
   return (Date.parse(end) / 1000) - (Date.parse(start) / 1000);
@@ -45,6 +66,7 @@ const setVersion = () => {
 
 document.addEventListener("DOMContentLoaded", (event) => {
   setVersion();
+  getLang(language);
   
   inter = setInterval(() => {
     const {days, hours, minutes, seconds, remaining} = countTime(tgif());
@@ -55,4 +77,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
       clearInterval(inter);
     }
   }, 1000);
+
+  document.querySelector('#lang').addEventListener('click', (e) => {
+    if (e.target && e.target.nodeName == "SPAN") {
+      setLang(e.target.classList[0].replace('flag-', ''));
+      e.target.classList[0]
+      const language = localStorage.getItem('language') || 'GB';
+      getLang(language);
+    }
+  });
 });
