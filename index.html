@@ -35,16 +35,28 @@
   </div>
 
   <div id="wrapper">
-    <span id="tgif">TGIF in…</span>
-    <div id="timer">LOADING TIMER</div>
+    <div id="timing-zone">
+      <span id="tgif">TGIF in…</span>
+      <div id="timer">?:??:??:??</div>
 
-    <div id="description">
-      Counter starts at Monday, 8AM and counting time until Friday, 4PM.
+      <button id="set-time">Want to change hour?</button>
+    </div>
+
+    <div id="question-zone">
+      <div id="error">Invalid input format</div>
+      <div id="question-when">
+        When your TGIF starts?
+      </div>
+      <div id="question-input">
+        <input type="text" name="when-time" id="when-time" placeholder="16:00">
+        <button id="accept-time">OK</button>
+      </div>
     </div>
   </div>
 
   <footer>
-    <span id="version-string">Version</span> <span id="version">?.?.?</span> | <span id="powered">counter powered by</span> <a href="https://momentjs.com/">moment.js</a> |
+    <span id="version-string">Version</span> <span id="version">?.?.?</span> |
+    <span id="powered">countdown powered by</span> <a href="https://momentjs.com/">moment.js</a> |
     <span id="flags">flags icons</span>: <a href="https://flags.avris.it/">Avris Flags</a> |
     <span id="author">author</span>: <a href="https://wojtekwernicki.eu">Wojtek Wernicki</a> |
     <a href="https://facebook.com/WojtekWernickiEU">Facebook</a> /
@@ -52,9 +64,12 @@
     <a href="https://instagram.com/WojtekWernickiEU">Instagram</a> |
     <a href="https://github.com/WojtekWernicki/tgif"><span id="source">source code</span></a> |
     <span id="license">license</span>: WTFPL
+    <div id="cookies">
+      This page uses Local Storage to store data about when you finish work and which language you use.
+    </div>
   </footer>
 
   <script src="moment.min.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js"></script> 
 </body>
 </html>

@@ -1,12 +1,14 @@
 {
   "lang-string": "Choose language",
   "tgif": "TGIF in…",
-  "description": "Counter starts at Monday, 8AM and counting time until Friday, 4PM.",
+  "set-time": "Want to change hour?",
+  "question-when": "When your TGIF starts?",
   "version-string": "Version",
-  "powered": "counter powered by",
+  "powered": "countdown powered by",
   "flags": "flags icons",
   "author": "author",
   "source": "source code",
   "license": "license",
+  "cookies": "This page uses Local Storage to store data about when you finish work and which language you use.",
   "title": "Is TGIF time?"
 }

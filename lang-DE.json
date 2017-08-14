@@ -1,13 +1,14 @@
 {
   "lang-string": "Sprache wählen",
   "tgif": "TGIF in…",
-  "description": "Der Countdown beginnt am Montag um 8 Uhr und tickt bis Freitag, 16 Uhr.",
+  "set-time": "Möchtest du die Uhrzeit ändern?",
+  "question-when": "Wann beginnt dein TGIF?",
   "version-string": "Version",
   "powered": "Countdown unterstützt von",
   "flags": "Ikonen der Fahnen",
   "author": "Autor",
   "source": "Quellcode",
   "license": "Lizenz",
+  "cookies": "Diese Website benutzt Local Storage, um zu speichern, wenn du Feierabend hast und welche Sprache du benutzst.",
   "title": "Ist es TGIF-Zeit?"
 }
-

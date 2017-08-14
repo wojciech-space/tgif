@@ -1,12 +1,14 @@
 {
   "lang-string": "Wybierz język",
   "tgif": "TGIF za…",
-  "description": "Licznik startuje w poniedziałek o 8:00 i odlicza czas do piątku do godziny 16:00.",
+  "set-time": "Chcesz zmienić godzinę?",
+  "question-when": "O której godzinie zaczynasz piątek, piąteczek, piątunio?",
   "version-string": "Wersja",
   "powered": "licznik napędzany przez",
   "flags": "ikonki flag",
   "author": "autor",
   "source": "kod źródłowy",
   "license": "licencja",
+  "cookies": "Ta strona używa Local Storage, aby przechowywać informacje kiedy kończysz pracę i jakiego języka używasz.",
   "title": "Czy to już TGIF?"
 }

@@ -29,6 +29,10 @@ body * {
   text-align: center;
 }
 
+button {
+  cursor: pointer;
+}
+
 #lang {
   line-height: 24px;
   text-align: right;
@@ -53,11 +57,77 @@ body * {
   flex: 1;
 }
 
+#timing-zone {
+  display: initial;
+}
+
+#timing-zone.hide {
+  display: none;
+}
+
+#question-zone {
+  display: none;
+}
+
+#error {
+  background: #F32328;
+  color: #fff;
+  display: none;
+  font-size: 24px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+#error.show {
+  display: inherit;
+}
+
+#question-zone.show {
+  display: unset;
+}
+
+#question-zone input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-family: monospace;
+  font-size: 36px;
+  outline: none;
+  padding: 5px 0;
+  width: 200px;
+}
+
+#question-zone button {
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 50%;
+  height: 46px;
+  outline: none;
+  padding: 5px;
+  width: 46px;
+}
+
+#question-zone button:active {
+  background: #aaa;
+}
+
 #timer {
   color: #f00;
   font-family: monospace;
   font-size: 54px;
   font-weight: 700;
+}
+
+#set-time {
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 5px;
+  height: 44px;
+  font-size: 24px;
+  line-height: 24px;
+  outline: none;
+  padding: 10px;
 }
 
 @media screen and (min-width: 600px) {
