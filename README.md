@@ -1,5 +1,5 @@
 # Is TGIF time?
-###### version 1.0.0
+###### version 1.0.1
 
 Simple countdown showing time until Fridaaaaaaay night. You set your own hour of TGIF. Three languages available: English, German, Polish.
 

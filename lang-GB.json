@@ -2,6 +2,7 @@
   "lang-string": "Choose language",
   "tgif": "TGIF in…",
   "set-time": "Want to change hour?",
+  "error": "Invalid time format",
   "question-when": "When your TGIF starts?",
   "version-string": "Version",
   "powered": "countdown powered by",

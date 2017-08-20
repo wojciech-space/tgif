@@ -1,6 +1,6 @@
 {
   "name": "tgif",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Is TGIF time?",
   "main": "index.html",
   "scripts": {
