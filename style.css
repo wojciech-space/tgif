@@ -76,7 +76,7 @@ button {
   font-size: 24px;
   margin-bottom: 10px;
   padding: 10px;
-  text-align: center;
+  justify-content: center;
 }
 
 #error.show {
@@ -84,7 +84,8 @@ button {
 }
 
 #question-zone.show {
-  display: unset;
+  display: flex;
+  flex-direction: column;
 }
 
 #question-zone input {
