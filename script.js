@@ -55,7 +55,7 @@ function fTGIF () {
     timerContainer.setAttribute('class', 'hide');
     errorContainer.setAttribute('class', '');
     questionContainer.setAttribute('class', 'show');
-    document.querySelector('#when-time').value = `${this.getTGIFtime().hour}:${this.getTGIFtime().minute < 10 ? '0' + this.getTGIFtime().minute : this.getTGIFtime().minute}` || '';
+    document.querySelector('#when-time').value = `${this.getTGIFtime().hour < 10 ? '0' + this.getTGIFtime().hour : this.getTGIFtime().hour}:${this.getTGIFtime().minute < 10 ? '0' + this.getTGIFtime().minute : this.getTGIFtime().minute}` || '';
 
     document.querySelector('#accept-time').addEventListener('click', this.setTGIFtime);
   }
@@ -63,7 +63,7 @@ function fTGIF () {
   this.countdown = (diff, friday) => {
     if (diff > (432800 - ((24 - friday.hour) * 3600))) {
       return {days: 0, hours: 0, minutes: 0, seconds: 0, diff: 0}
-    }    
+    }
 
     let remaining = diff;
     const days = remaining / 86400 | 0;
@@ -102,6 +102,7 @@ function fTGIF () {
       localStorage.setItem('time', JSON.stringify(time));
       timerContainer.setAttribute('class', '');
       questionContainer.setAttribute('class', '');
+      timer.style.color = 'red';
     })
     .catch((error) => {
       errorContainer.setAttribute('class', 'show');
@@ -116,7 +117,7 @@ function fTGIF () {
         input = input.split(':');
         const hours = parseInt(input[0]),
           minutes = parseInt(input[1]);
-        if (hours > 24 || hours < 0 || minutes > 59 || minutes < 0) {
+        if (hours > 23 || hours < 0 || isNaN(hours) || minutes > 59 || minutes < 0 || isNaN(minutes)) {
           reject({error: true});
         }
 
@@ -155,8 +156,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const intFunction = () => {
     const {days, hours, minutes, seconds, diff} = TGIF.countdown(TGIF.getCurrDiff(TGIF.getTGIFtime()), TGIF.getTGIFtime());
     timer.textContent = `${days}:${hours > 9 ? hours : '0' + hours}:${minutes > 9 ? minutes : '0' + minutes}:${seconds > 9 ? seconds : '0' + seconds}`;
-    
-    if(diff <= 0) {
+
+    if (diff <= 0) {
       timer.style.color = 'green';
     }
   }
@@ -167,9 +168,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 document.querySelector('#lang').addEventListener('click', (e) => {
-  if (e.target && e.target.nodeName == "SPAN") {
+  if (e.target) {
     const LANGUAGE = new fLanguage();
-    LANGUAGE.set(e.target.classList[0].replace('flag-', ''));
+
+    if (e.target.nodeName === "BUTTON") {
+      LANGUAGE.set(e.target.id);
+    } else if (e.target.nodeName === "SPAN") {
+      LANGUAGE.set(e.target.classList[0].replace('flag-', ''));
+    }
+
     const lang = localStorage.getItem('language') || 'GB';
     LANGUAGE.get(lang);
   }
